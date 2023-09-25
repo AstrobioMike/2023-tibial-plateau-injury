@@ -14,8 +14,8 @@ plot <- ggplot(df, aes(x = Days.after.surgery, y = Degrees.bent)) + geom_point(c
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5))
 
-curr_date_prefix <- format(Sys.time(), "%d-%d-%Y")
+curr_date_prefix <- format(Sys.time(), "%d-%b-%Y")
 
-pdf(curr_date_prefix + "-knee-ROM-progress.pdf", width = 5, height = 4)
+pdf(paste0(curr_date_prefix, "-knee-ROM-progress.pdf"), width = 5, height = 4)
 plot
 dev.off()
