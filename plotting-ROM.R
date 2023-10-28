@@ -15,8 +15,8 @@ plot <- ggplot(df, aes(x = Days.after.surgery, y = Degrees.bent)) + geom_point(c
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkblue") +
     geom_text(x = 6.6, y = 135, label = "GOAL", color = "darkblue") +
     geom_vline(xintercept = 84, linetype = "dashed", color = "red") +
-    geom_text(x = 72.5, y = 57.5, label = "Ideal deadline", color = "red") +
-    geom_text(x = 72.5, y = 52.5, label = "(12 weeks)", color = "red", size = 3) +
+    geom_text(x = 71.5, y = 57.5, label = "Ideal deadline", color = "red") +
+    geom_text(x = 71.5, y = 52.5, label = "(12 weeks)", color = "red", size = 3) +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
 
