@@ -9,7 +9,7 @@ max_day_for_plot <- ceiling(df[2] %>% max() / 7) * 7
 
 plot <- ggplot(df, aes(x = Days.after.surgery, y = Degrees.bent)) + geom_point(color = "blue") +
     labs(y = "Degrees bent", x = "Days after surgery", title = "Knee range-of-motion recovery!",
-         subtitle = paste0("(", curr_date, ")")) +
+         subtitle = paste0("(as of ", curr_date, ")")) +
     ylim(45,140) +
     scale_x_continuous(breaks=seq(0,max_day_for_plot,7), limits = c(0,max_day_for_plot), minor_breaks = NULL) +
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkblue") +
