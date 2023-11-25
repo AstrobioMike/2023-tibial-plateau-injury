@@ -13,7 +13,7 @@ plot <- ggplot(df, aes(x = Days.after.surgery, y = Degrees.bent)) + geom_point(c
     ylim(45,140) +
     scale_x_continuous(breaks=seq(0,max_day_for_plot,7), limits = c(0,max_day_for_plot), minor_breaks = NULL) +
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkblue") +
-    geom_text(x = 6.6, y = 135, label = "GOAL", color = "darkblue") +
+    geom_text(x = 14, y = 135, label = "Nominal Goal", color = "darkblue") +
     geom_vline(xintercept = 84, linetype = "dashed", color = "red") +
     geom_text(x = 68, y = 57.5, label = "Ideal deadline", color = "red") +
     geom_text(x = 68, y = 52.5, label = "(12 weeks)", color = "red", size = 3) +
