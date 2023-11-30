@@ -47,6 +47,7 @@ pdf(paste0(curr_date, "-knee-ROM-progress-weeks.pdf"), width = 5, height = 4)
 plot_weeks
 dev.off()
 
+# writing out latest as png for github readme
 png(paste0("latest-knee-ROM-progress-weeks-plot.png"), units = "in", res = 144, width = 5, height = 4)
 plot_weeks
 dev.off()
