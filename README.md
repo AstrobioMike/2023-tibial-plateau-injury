@@ -2,7 +2,7 @@
 
 In July of 2023 I suffered a bicondylar, comminuted tibial plateau fracture 😞
 
-This is just a place holding my [knee range-of-motion data](knee-range-of-motion.tsv) and a [plotting script](plotting-ROM.R) throughout recovery throughout recovery and a plotting script 😂
+This is just a place holding my [knee range-of-motion data](knee-range-of-motion.tsv) and a [plotting script](plotting-ROM.R) throughout recovery 😂
 
 ## Latest plot
 <img align="center" src="latest-knee-ROM-progress-weeks-plot.png">
