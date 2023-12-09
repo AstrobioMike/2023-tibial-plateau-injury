@@ -1,6 +1,6 @@
 # 2023 Tibial plateau injury
 
-In July of 2023 I suffered a bicondylar, comminuted tibial plateau fracture 😞
+In July of 2023 I suffered a really bad leg break, a bicondylar, comminuted tibial plateau fracture 😞
 
 This is just a place holding my [knee range-of-motion data](knee-range-of-motion.tsv) and a [plotting script](plotting-ROM.R) throughout recovery 😂
 
