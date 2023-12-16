@@ -15,8 +15,8 @@ plot_days <- ggplot(df, aes(x = Days.after.surgery, y = Degrees.bent)) + geom_po
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkblue") +
     geom_text(x = 14, y = 135, label = "Nominal Goal", color = "darkblue") +
     geom_vline(xintercept = 84, linetype = "dashed", color = "red") +
-    geom_text(x = 68, y = 57.5, label = "Ideal deadline", color = "red") +
-    geom_text(x = 68, y = 52.5, label = "(12 weeks)", color = "red", size = 3) +
+    geom_text(x = 63, y = 57.5, label = "Ideal deadline", color = "red") +
+    geom_text(x = 63, y = 52.5, label = "(12 weeks)", color = "red", size = 3) +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
@@ -33,7 +33,7 @@ plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) + ge
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkblue") +
     geom_text(x = 2, y = 135, label = "Nominal Goal", color = "darkblue") +
     geom_vline(xintercept = 12, linetype = "dashed", color = "red") +
-    geom_text(x = 9.5, y = 55, label = "Ideal deadline", color = "red") +
+    geom_text(x = 9, y = 55, label = "Ideal deadline", color = "red") +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
