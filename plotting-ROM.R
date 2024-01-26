@@ -37,8 +37,8 @@ plot_days <- ggplot(df, aes(x = Days.after.surgery, y = Degrees.bent)) +
     geom_hline(yintercept = 140, linetype = "dashed", color = "darkblue") +
     geom_text(x = 11, y = 145, label = "Better Goal", color = "darkblue") +
     geom_point(color = "blue") +
-    geom_segment(aes(x = 31, y = 142, xend = 31, yend = 147), color = "darkblue", lineend = "round", linejoin = "mitre", size = 0.5, 
-        arrow = arrow(length = unit(2, "mm"))) +
+#     geom_segment(aes(x = 31, y = 142, xend = 31, yend = 147), color = "darkblue", lineend = "round", linejoin = "mitre", size = 0.5, 
+#         arrow = arrow(length = unit(2, "mm"))) +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
@@ -66,7 +66,7 @@ num_total_weeks <- ceiling(df[2] %>% max() / 7)
 
 plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) + 
     labs(y = "Degrees bent", x = "Weeks after surgery", title = "Knee range-of-motion recovery!",
-        subtitle = paste0("(", curr_date, ")")) +
+        subtitle = paste0("(as of ", curr_date, ")")) +
     scale_y_continuous(breaks=seq(50, 150, 10), limits = c(45, 150), minor_breaks = NULL) +
     scale_x_continuous(breaks=seq(0, num_total_weeks, 1), limits = c(0, num_total_weeks), minor_breaks = NULL) +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = 120, ymax = 130, alpha = 0.10, fill = "darkgreen") +
@@ -77,7 +77,7 @@ plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) +
     geom_hline(yintercept = 140, linetype = "dashed", color = "darkblue") +
     geom_text(x = 1.53, y = 145, label = "Better Goal", color = "darkblue") +
     geom_point(color = "blue") +
-    geom_segment(aes(x = 4.42, y = 142, xend = 4.42, yend = 147), color = "darkblue", lineend = "round", linejoin = "mitre", size = 0.5, 
+    geom_segment(aes(x = 5, y = 142, xend = 5, yend = 147), color = "darkblue", lineend = "round", linejoin = "mitre", size = 0.5, 
         arrow = arrow(length = unit(2, "mm"))) +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +
