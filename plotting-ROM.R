@@ -68,7 +68,7 @@ plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) +
     labs(y = "Degrees bent", x = "Weeks after surgery", title = "Knee range-of-motion recovery!",
         subtitle = paste0("(as of ", curr_date, ")")) +
     scale_y_continuous(breaks=seq(50, 150, 10), limits = c(45, 150), minor_breaks = NULL) +
-    scale_x_continuous(breaks=seq(0, num_total_weeks, 1), limits = c(0, num_total_weeks), minor_breaks = NULL) +
+    scale_x_continuous(breaks=seq(0, num_total_weeks, 2), limits = c(0, num_total_weeks), minor_breaks = NULL) +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = 120, ymax = 130, alpha = 0.10, fill = "darkgreen") +
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkgreen") +
     geom_hline(yintercept = 120, linetype = "dashed", color = "darkgreen") +
