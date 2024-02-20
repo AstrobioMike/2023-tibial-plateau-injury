@@ -72,12 +72,12 @@ plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = 120, ymax = 130, alpha = 0.10, fill = "darkgreen") +
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkgreen") +
     geom_hline(yintercept = 120, linetype = "dashed", color = "darkgreen") +
-    geom_text(x = 2, y = 125, label = "Nominal Goal", color = "darkgreen") +
+    geom_text(x = 2.5, y = 125, label = "Nominal Goal", color = "darkgreen") +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = 140, ymax = Inf, alpha = 0.07, fill = "darkblue") +
     geom_hline(yintercept = 140, linetype = "dashed", color = "darkblue") +
-    geom_text(x = 1.53, y = 145, label = "Better Goal", color = "darkblue") +
+    geom_text(x = 2, y = 145, label = "Better Goal", color = "darkblue") +
     geom_point(color = "blue") +
-    geom_segment(aes(x = 5, y = 142, xend = 5, yend = 147), color = "darkblue", lineend = "round", linejoin = "mitre", size = 0.5, 
+    geom_segment(aes(x = 5.5, y = 142, xend = 5.5, yend = 147), color = "darkblue", lineend = "round", linejoin = "mitre", size = 0.5, 
         arrow = arrow(length = unit(2, "mm"))) +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) +
