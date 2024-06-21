@@ -73,13 +73,14 @@ total_days_after_surgery_when_plot_made <- df[2] %>% max()
 plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) + 
     labs(y = "Max degrees bent", x = "Weeks after surgery", title = "Knee range-of-motion recovery!",
         subtitle = paste0("(as of ", latest_date, "; ", total_days_after_surgery_when_plot_made, " days after surgery)")) +
-    scale_y_continuous(breaks=seq(50, 160, 10), limits = c(45, 155), minor_breaks = NULL) +
+    scale_y_continuous(breaks=seq(50, 160, 10), limits = c(45, 160), minor_breaks = NULL) +
     scale_x_continuous(breaks=seq(0, num_total_weeks, 4), limits = c(0, num_total_weeks), minor_breaks = NULL) +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = 120, ymax = 130, alpha = 0.10, fill = "darkgreen") +
     geom_hline(yintercept = 130, linetype = "dashed", color = "darkgreen") +
     geom_hline(yintercept = 120, linetype = "dashed", color = "darkgreen") +
     geom_text(x = 4, y = 125, label = "Nominal Goal", color = "darkgreen") +
     annotate("rect", xmin = -Inf, xmax = Inf, ymin = 140, ymax = Inf, alpha = 0.07, fill = "darkblue") +
+    geom_hline(yintercept = 160, linetype = "solid", color = "darkblue") +
     geom_hline(yintercept = 140, linetype = "dashed", color = "darkblue") +
     geom_text(x = 3, y = 151, label = "Better Goal", color = "darkblue") +
     geom_point(color = "blue") +
