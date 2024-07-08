@@ -84,7 +84,7 @@ plot_weeks <- ggplot(df, aes(x = Days.after.surgery / 7, y = Degrees.bent)) +
     geom_hline(yintercept = 140, linetype = "dashed", color = "darkblue") +
     geom_text(x = 3, y = 151, label = "Better Goal", color = "darkblue") +
     geom_point(color = "blue") +
-    geom_segment(aes(x = 8.5, y = 148, xend = 8.5, yend = 155), color = "darkblue", lineend = "round", linejoin = "mitre", linewidth = 0.5, 
+    geom_segment(aes(x = 9, y = 148, xend = 9, yend = 155), color = "darkblue", lineend = "round", linejoin = "mitre", linewidth = 0.5, 
         arrow = arrow(length = unit(2, "mm"))) +
     theme_bw() +
     theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5, size = 8)) +
